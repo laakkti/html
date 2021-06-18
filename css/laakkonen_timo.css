@@ -1,0 +1,321 @@
+/***************************************************
+ Kaikille sivuille yhteisiä tyylimäärittelyjä
+ (sivurunko: body, main, header, article, footer) 
+***************************************************/
+body {
+  background-color: #d3d3d3;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #1a3e4c;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+header,
+article,
+footer {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+header {
+  padding-top: 3px;
+  padding-bottom: 5px;
+  background-color: #347b98;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 8px;
+}
+
+header h1 {
+  padding-left: 15px;
+  color: #1a3e4c;
+}
+
+article {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background-color: #e4f1f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+article h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #091d34;
+  font-style: oblique;
+}
+
+/*  Navigointi linkkien (menun) tyylimäärittelyt */
+nav {
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #67afcb;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a {
+  text-decoration: none;
+  line-height: 2em;
+  display: block;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #1a3e4c;
+}
+
+nav li a:hover {
+  text-decoration: none;
+  background-color: #347b98;
+  color: #e1ecf9;
+}
+
+nav li a:active {
+  text-decoration: none;
+  background-color: #1a3e4c;
+  color: #e4f1f6;
+}
+
+nav ul {
+  max-width: none;
+  padding-left: 0px;
+  margin: 0px;
+  border: none;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* footerin tyylimärittelyt */
+footer {
+  background-color: #092834;
+}
+
+footer section {
+  color: #347b98;
+}
+
+footer section:nth-child(1) {
+  float: left;
+  text-align: left;
+  margin: 8px 8px 8px 8px;
+}
+
+footer section:nth-child(2) {
+  float: right;
+  text-align: right;
+  margin: 8px 8px 8px 8px;
+}
+
+/* rivinvaihto, korvataan <br>-tagi, jota ei suositella käytettäväksi */
+footer span::before {
+  content: '\A';
+  white-space: pre;
+}
+
+/* kuviin liittyvät */
+img {
+  max-width: 100%;
+}
+
+figure {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 20%;
+  margin-left: 0px;
+  margin-right: 0.2em;
+  border: 1px solid transparent;
+}
+
+/***************************************************
+ highway-to-code-TL.html tyylimäärittelyt 
+***************************************************/
+.h2c table {
+  border: none;
+  border-collapse: collapse;
+  text-align: left;
+  vertical-align: top;
+}
+
+.h2c th,
+.h2c td {
+  border: none;
+  padding: 10px;
+}
+
+.h2c th {
+  background-color: #67afcb;
+  color: #091d34;
+}
+
+.h2c .universities_table tr:nth-child(even) {
+  background-color: #fffafa;
+}
+
+.h2c .universities_table tr:nth-child(odd) {
+  background-color: #a8d1e1;
+}
+
+/***************************************************
+ index.html tyylimäärittelyjä
+***************************************************/
+.index .image {
+  margin-top: 0px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.index .data {
+  display: inline-block;
+  vertical-align: bottom;
+  color: #1a3e4c;
+}
+/* rivinvaihto, korvataan <br>-tagi, jota ei suositella käytettäväksi */
+.index .data span::before {
+  content: '\A';
+  white-space: pre;
+}
+
+/***************************************************
+ off-studies-TL.html tyylimäärittelyt 
+***************************************************/
+.offStudies .list {
+  display: inline-block;
+  border: solid #347b98;
+  border-radius: 13px;
+  width: 250px;
+  height: 250px;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+.offStudies .list h3 {
+  background-color: #347b98;
+  color: #67afcb;
+  margin-top: 0px;
+  line-height: 2em;
+  text-align: left;
+  text-indent: 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.offStudies .subList {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+.offStudies .otherLeisure {
+  list-style-type: '★  ';
+}
+
+/***************************************************
+ images-TL.html tyylimäärittelyjä
+***************************************************/
+/* asetetaan kuvan teksti kuvan sisälle, oletusarvoisesti ei näkyvissä opacity:0, 
+   hoover tuo näkyviin opacity:1 */
+.images .overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+  opacity: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin-left: 0px;
+  margin-bottom: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* muutetaan overlay-luokan opacity-ominaisuutta */
+.images figure:hover .overlay {
+  opacity: 1;
+}
+
+/***************************************************
+ form-TL.html tyylimäärittelyjä
+***************************************************/
+.form .contactMe {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  row-gap: 10px;
+  column-gap: 20px;
+  padding: 10px;
+  margin-right: 20px;
+  margin-left: auto;
+  background-color: #1a3e4c;
+  color: #67afcb;
+}
+.form .contactMe input,
+.form .contactMe textarea {
+  border: none;
+  text-indent: 5px;
+  background-color: #e4f1f6;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.form .contactMe input:focus {
+  outline: none;
+  border: 1px solid #448d76;
+}
+.form .contactMe input:hover,
+.form textarea:hover {
+  background-color: #67afcb;
+}
+
+/* send- ja reset-painikkeisiin liittyvät */
+.form .contactMe .btnSubmit {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.form .contactMe .btnSubmit:hover {
+  background-color: RoyalBlue;
+}
+.form .contactMe .btnReset {
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.form .contactMe .btnReset:hover {
+  background-color: darkgray;
+}
+.form .contactMe .buttons {
+  float: right;
+}
+
+.form .contactMe table {
+  border: none;
+}
+.form .contactMe table td {
+  border: none;
+  padding: 2px;
+}
+
+/* kun valitaan Contack checkbox telephone niin näytetään input-kenttä
+   ja vastaavasti unchecked piilottaa input-kentän 
+   white-space: nowrap estää input.elementin linebreakin  */
+.form .contactMe #phoneNumber {
+  visibility: hidden;
+  white-space: nowrap;
+}
+.form .contactMe #telephone:checked + #phoneNumber {
+  visibility: visible;
+}

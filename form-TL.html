@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Contact me - TL</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/laakkonen_timo.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="author" content="Timo Laakkonen">
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Studying front-end developing</h1>
+      <nav>
+        <ul>
+          <li><a href='index.html'>Me</a></li>
+          <li><a href='highway-to-code-TL.html'>Studies</a></li>
+          <li><a href='off-studies-TL.html'>Leisure</a></li>
+          <li><a href='images-TL.html'>Images</a></li>
+          <li><a href='form-TL.html'>Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <article class='form'>
+      <h2>Contact me</h2>
+
+      <!--<form class='contactMe' name='contactMe' id='contactMe' ction="http://localhost:3000/" method="POST" onsubmit="return handleForm()">          
+          // esim. tsekataan lähettäjän e-mail (e-mail on elementin id arvo) 
+           const handleForm = () => {
+               const x = document.forms["contactMe"]["e-mail"].value;
+               alert(x);
+           }  
+      -->
+
+      <form class='contactMe' name='contactMe' id='contactMe'>
+
+        <label for=" name">Name</label>
+        <input type="text" name="name" id="name" required placeholder="Fullname">
+        <label for="e-mail">Email</label>
+        <input type="email" name="e-mail" id="e-mail" required placeholder="email">
+
+        <p></p>
+        <p></p>
+
+        <label>Contact</label>
+        <div>
+          <label for='email'>e-mail</label>
+          <input type="checkbox" name="contactType[]" id=email' value='e-mail'>
+
+          <label for='telephone'>telephone</label>
+          <input type="checkbox" name="contactType[]" id='telephone' value='telephone'>
+          <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Phonenumber">
+        </div>
+
+        <label>Reason</label>
+        <div>
+          <label for='notify'>Notify</label>
+          <input type="radio" name="reason[]" id='notify' value='notify'>
+          <label for='urgent'>Urgent</label>
+          <input type="radio" name="reason[]" id='urgent' value='urgent'>
+          <label for='secret'>Top secret</label>
+          <input type="radio" name="reason[]" id='secret' value='secret'>
+        </div>
+
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" required placeholder="Subject">
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" maxlength="400" rows="10" cols="40"
+          placeholder="Write your message hear"></textarea>
+        <div></div>
+        <div>
+          <table class='buttons'>
+            <tr>
+              <td>
+                <button class="btnReset" type='reset' value='Reset' title='Reset'><i class="fa fa-undo"></i></button>
+              </td>
+              <td>
+                <button class="btnSubmit" type="submit" value='Submit' title='Send'><i class="fa fa-send"></i></button>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <di></di>
+      </form>
+    </article>
+
+    <footer>
+      <section>
+        Timo Heikki Laakkonen
+        <span>2021</span>
+      </section>
+      <section>
+        Course work
+        <span>Highway to code</span>
+        <span> html and css course</span>
+      </section>
+      <div style="clear: both"></div>
+    </footer>
+
+  </main>
+</body>
+
+</html>
